@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Entry from "./components/Entry";
+
+import entries from "./data";
 
 function App() {
+  console.log(entries);
+  const entriesJSX = entries.map((entry) => (
+    <Entry key={entry.id} item={entry} />
+  ));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <Navbar />
+      </nav>
+      <main className="main-section">{entriesJSX}</main>
     </div>
   );
 }

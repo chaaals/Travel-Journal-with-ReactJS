@@ -1,0 +1,19 @@
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+  padding: 1.5rem;
+
+  background-color: #f55a5a;
+  color: #fff;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+}
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
